@@ -19,6 +19,11 @@ function connect() {
   ws.onmessage = e => {
     const u = URL.createObjectURL(e.data);
     img.onload = () => URL.revokeObjectURL(u);
+    img.onerror = () => {
+      st.textContent = 'Ricevuti dati, ma il fotogramma non è un’immagine valida.';
+      st.style.display = 'block';
+      URL.revokeObjectURL(u);
+    };
     img.src = u;
     st.style.display = 'none';
   };
@@ -50,7 +55,12 @@ server.on('upgrade', (req, socket, head) => {
       viewers.add(ws);
       ws.on('close', () => viewers.delete(ws));
     } else {
+      let acknowledgedFirstFrame = false;
       ws.on('message', (data) => {
+        if (!acknowledgedFirstFrame) {
+          acknowledgedFirstFrame = true;
+          if (ws.readyState === 1) ws.send('frame-received');
+        }
         for (const v of viewers) if (v.readyState === 1) v.send(data, { binary: true });
       });
     }
