@@ -5,6 +5,12 @@ File pronti da scaricare:
 - [App Android](SchermoLive.apk) — APK di debug, firmato per installazioni di prova.
 - [App iOS](SchermoLive.ipa) — IPA non firmato; va firmato prima dell’installazione.
 
+## Installazione su Windows
+
+Scarica l’installer [SchermoLive.Setup.1.0.0.exe dalla release ufficiale v1.0.0](https://github.com/Max2024-2/SchermoLive/releases/download/v1.0.0/SchermoLive.Setup.1.0.0.exe). Quando scegli dove salvare il file, seleziona il Desktop; se il browser lo salva in Download, spostalo sul Desktop. Poi avvialo con un doppio clic.
+
+Windows SmartScreen potrebbe mostrare un avviso perché l’installer non è firmato. Eseguilo solo se lo hai scaricato dalla release ufficiale indicata sopra.
+
 Viewer iOS: https://schermolive-2-0.onrender.com/view
 Viewer Android: https://schermolive-android.onrender.com/view
 
