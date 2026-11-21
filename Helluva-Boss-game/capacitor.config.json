@@ -1,0 +1,8 @@
+{
+  "appId": "com.hellagency.arena",
+  "appName": "Hell Agency",
+  "webDir": "www",
+  "server": {
+    "androidScheme": "https"
+  }
+}

@@ -17,3 +17,9 @@ Viewer Android: https://schermolive-android.onrender.com/view
 Da un browser desktop aggiornato su Windows o macOS, apri https://schermolive-android.onrender.com/share e premi **Avvia condivisione**. Seleziona lo schermo o la finestra nella richiesta del browser; per interrompere, usa il pulsante nella pagina o i controlli del browser. La pagina trasmette solo fotogrammi video, senza audio. Gli spettatori possono aprire il viewer Android.
 
 La condivisione richiede un browser che supporti `getDisplayMedia` e una pagina servita tramite HTTPS. Per pubblicare il server Android su Render, imposta Root Directory su `server`, Build Command su `npm install` e Start Command su `npm start`; Render serve la pagina di condivisione allo stesso indirizzo del server con il percorso `/share`.
+
+Il gioco **Hell Agency — Arena infernale** è in `hell-agency.html` con il motore 3D locale `three.min.js`; tieni entrambi i file nella stessa cartella per aprirlo anche offline. Su PC usa WASD, mouse per mirare e sparare e Spazio per lo scatto; su touch usa i comandi sullo schermo. La pagina è servita anche dal percorso `/game`.
+
+La modalità online usa il WebSocket `/party` del server Node. Per giocare via Internet, pubblica la versione aggiornata della cartella `server` su Render; gli amici devono usare lo stesso indirizzo del server e codice stanza.
+
+Il pacchetto mobile Capacitor è nella cartella `Helluva-Boss-game`. Il workflow GitHub Actions `.github/workflows/build-helluva-game.yml` genera l’APK Android e, quando sono configurati i segreti di firma Apple, l’IPA iOS. I dettagli sono nel README della cartella mobile.

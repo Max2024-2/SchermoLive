@@ -1,0 +1,19 @@
+{
+  "name": "hell-agency-mobile",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Hell Agency mobile game",
+  "scripts": {
+    "sync": "cap sync",
+    "android": "cap open android",
+    "ios": "cap open ios"
+  },
+  "dependencies": {
+    "@capacitor/android": "6.2.1",
+    "@capacitor/core": "6.2.1",
+    "@capacitor/ios": "6.2.1"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "6.2.1"
+  }
+}
